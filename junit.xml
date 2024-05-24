@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="4" failures="4" errors="0" time="7.296">
+  <testsuite name="undefined" errors="0" failures="4" skipped="0" timestamp="2024-05-24T17:05:47" time="5.902" tests="4">
+    <testcase classname=" initial UI is rendered as expected" name=" initial UI is rendered as expected" time="0.089">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: null
+Received: &lt;ul class=&quot;mt-50 slide-up-fade-in styled&quot; data-testid=&quot;stock-data&quot; id=&quot;stockData&quot;&gt;&lt;li class=&quot;py-10&quot; /&gt;&lt;/ul&gt;
+    at Object.&lt;anonymous&gt; (/projects/challenge/src/App.test.js:18:39)
+    at Promise.then.completed (/projects/challenge/node_modules/jest-circus/build/utils.js:391:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/projects/challenge/node_modules/jest-circus/build/utils.js:316:10)
+    at _callCircusTest (/projects/challenge/node_modules/jest-circus/build/run.js:218:40)
+    at _runTest (/projects/challenge/node_modules/jest-circus/build/run.js:155:3)
+    at _runTestsForDescribeBlock (/projects/challenge/node_modules/jest-circus/build/run.js:66:9)
+    at run (/projects/challenge/node_modules/jest-circus/build/run.js:25:3)
+    at runAndTransformResultsToJestFormat (/projects/challenge/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:170:21)
+    at jestAdapter (/projects/challenge/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:82:19)
+    at runTestInternal (/projects/challenge/node_modules/jest-runner/build/runTest.js:389:16)
+    at runTest (/projects/challenge/node_modules/jest-runner/build/runTest.js:475:34)
+    at TestRunner.runTests (/projects/challenge/node_modules/jest-runner/build/index.js:101:12)
+    at TestScheduler.scheduleTests (/projects/challenge/node_modules/@jest/core/build/TestScheduler.js:333:13)
+    at runJest (/projects/challenge/node_modules/@jest/core/build/runJest.js:404:19)
+    at _run10000 (/projects/challenge/node_modules/@jest/core/build/cli/index.js:320:7)
+    at runCLI (/projects/challenge/node_modules/@jest/core/build/cli/index.js:173:3)
+    at Object.run (/projects/challenge/node_modules/jest-cli/build/cli/index.js:155:37)</failure>
+    </testcase>
+    <testcase classname=" search is made on by clicking on search button and no results found" name=" search is made on by clicking on search button and no results found" time="1.057">
+      <failure>Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: null
+Received: &lt;ul class=&quot;mt-50 slide-up-fade-in styled&quot; data-testid=&quot;stock-data&quot; id=&quot;stockData&quot;&gt;&lt;li class=&quot;py-10&quot; /&gt;&lt;/ul&gt;
+
+Ignored nodes: comments, script, style
+&lt;html&gt;
+  &lt;head /&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;div&gt;
+        &lt;h8k-navbar
+          header=&quot;Stock Data&quot;
+        /&gt;
+        &lt;div
+          class=&quot;layout-column align-items-center mt-50&quot;
+        &gt;
+          &lt;section
+            class=&quot;layout-row align-items-center justify-content-center&quot;
+          &gt;
+            &lt;input
+              class=&quot;large&quot;
+              data-testid=&quot;app-input&quot;
+              id=&quot;app-input&quot;
+              placeholder=&quot;5-January-2000&quot;
+              type=&quot;text&quot;
+            /&gt;
+            &lt;button
+              class=&quot;&quot;
+              data-testid=&quot;submit-button&quot;
+              id=&quot;submit-button&quot;
+            &gt;
+              Search
+            &lt;/button&gt;
+          &lt;/section&gt;
+          &lt;ul
+            class=&quot;mt-50 slide-up-fade-in styled&quot;
+            data-testid=&quot;stock-data&quot;
+            id=&quot;stockData&quot;
+          &gt;
+            &lt;li
+              class=&quot;py-10&quot;
+            /&gt;
+          &lt;/ul&gt;
+          &lt;div
+            class=&quot;mt-50 slide-up-fade-in&quot;
+            data-testid=&quot;no-result&quot;
+            id=&quot;no-result&quot;
+          /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    at /projects/challenge/src/App.test.js:35:41
+    at runWithExpensiveErrorDiagnosticsDisabled (/projects/challenge/node_modules/@testing-library/dom/dist/config.js:47:12)
+    at checkCallback (/projects/challenge/node_modules/@testing-library/dom/dist/wait-for.js:127:77)
+    at checkRealTimersCallback (/projects/challenge/node_modules/@testing-library/dom/dist/wait-for.js:121:16)
+    at Timeout.task [as _onTimeout] (/projects/challenge/node_modules/jsdom/lib/jsdom/browser/Window.js:516:19)
+    at listOnTimeout (node:internal/timers:569:17)
+    at processTimers (node:internal/timers:512:7)</failure>
+    </testcase>
+    <testcase classname=" search is made on by clicking on search button and result found - test 1" name=" search is made on by clicking on search button and result found - test 1" time="1.022">
+      <failure>Error: expect(received).toHaveLength(expected)
+
+Expected length: 4
+Received length: 1
+Received object: [&lt;li class=&quot;py-10&quot; /&gt;]
+
+Ignored nodes: comments, script, style
+&lt;html&gt;
+  &lt;head /&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;div&gt;
+        &lt;h8k-navbar
+          header=&quot;Stock Data&quot;
+        /&gt;
+        &lt;div
+          class=&quot;layout-column align-items-center mt-50&quot;
+        &gt;
+          &lt;section
+            class=&quot;layout-row align-items-center justify-content-center&quot;
+          &gt;
+            &lt;input
+              class=&quot;large&quot;
+              data-testid=&quot;app-input&quot;
+              id=&quot;app-input&quot;
+              placeholder=&quot;5-January-2000&quot;
+              type=&quot;text&quot;
+            /&gt;
+            &lt;button
+              class=&quot;&quot;
+              data-testid=&quot;submit-button&quot;
+              id=&quot;submit-button&quot;
+            &gt;
+              Search
+            &lt;/button&gt;
+          &lt;/section&gt;
+          &lt;ul
+            class=&quot;mt-50 slide-up-fade-in styled&quot;
+            data-testid=&quot;stock-data&quot;
+            id=&quot;stockData&quot;
+          &gt;
+            &lt;li
+              class=&quot;py-10&quot;
+            /&gt;
+          &lt;/ul&gt;
+          &lt;div
+            class=&quot;mt-50 slide-up-fade-in&quot;
+            data-testid=&quot;no-result&quot;
+            id=&quot;no-result&quot;
+          /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    at /projects/challenge/src/App.test.js:61:32
+    at runWithExpensiveErrorDiagnosticsDisabled (/projects/challenge/node_modules/@testing-library/dom/dist/config.js:47:12)
+    at checkCallback (/projects/challenge/node_modules/@testing-library/dom/dist/wait-for.js:127:77)
+    at checkRealTimersCallback (/projects/challenge/node_modules/@testing-library/dom/dist/wait-for.js:121:16)
+    at Timeout.task [as _onTimeout] (/projects/challenge/node_modules/jsdom/lib/jsdom/browser/Window.js:516:19)
+    at listOnTimeout (node:internal/timers:569:17)
+    at processTimers (node:internal/timers:512:7)</failure>
+    </testcase>
+    <testcase classname=" search is made on by clicking on search button and result found - test 2" name=" search is made on by clicking on search button and result found - test 2" time="1.013">
+      <failure>Error: expect(received).toHaveLength(expected)
+
+Expected length: 4
+Received length: 1
+Received object: [&lt;li class=&quot;py-10&quot; /&gt;]
+
+Ignored nodes: comments, script, style
+&lt;html&gt;
+  &lt;head /&gt;
+  &lt;body&gt;
+    &lt;div&gt;
+      &lt;div&gt;
+        &lt;h8k-navbar
+          header=&quot;Stock Data&quot;
+        /&gt;
+        &lt;div
+          class=&quot;layout-column align-items-center mt-50&quot;
+        &gt;
+          &lt;section
+            class=&quot;layout-row align-items-center justify-content-center&quot;
+          &gt;
+            &lt;input
+              class=&quot;large&quot;
+              data-testid=&quot;app-input&quot;
+              id=&quot;app-input&quot;
+              placeholder=&quot;5-January-2000&quot;
+              type=&quot;text&quot;
+            /&gt;
+            &lt;button
+              class=&quot;&quot;
+              data-testid=&quot;submit-button&quot;
+              id=&quot;submit-button&quot;
+            &gt;
+              Search
+            &lt;/button&gt;
+          &lt;/section&gt;
+          &lt;ul
+            class=&quot;mt-50 slide-up-fade-in styled&quot;
+            data-testid=&quot;stock-data&quot;
+            id=&quot;stockData&quot;
+          &gt;
+            &lt;li
+              class=&quot;py-10&quot;
+            /&gt;
+          &lt;/ul&gt;
+          &lt;div
+            class=&quot;mt-50 slide-up-fade-in&quot;
+            data-testid=&quot;no-result&quot;
+            id=&quot;no-result&quot;
+          /&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+    at /projects/challenge/src/App.test.js:90:32
+    at runWithExpensiveErrorDiagnosticsDisabled (/projects/challenge/node_modules/@testing-library/dom/dist/config.js:47:12)
+    at checkCallback (/projects/challenge/node_modules/@testing-library/dom/dist/wait-for.js:127:77)
+    at checkRealTimersCallback (/projects/challenge/node_modules/@testing-library/dom/dist/wait-for.js:121:16)
+    at Timeout.task [as _onTimeout] (/projects/challenge/node_modules/jsdom/lib/jsdom/browser/Window.js:516:19)
+    at listOnTimeout (node:internal/timers:569:17)
+    at processTimers (node:internal/timers:512:7)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
