@@ -9,30 +9,46 @@ export default function StockData() {
     console.log("hi")
     setDate(value)
   }
-  const fetchStock = (value) => {
+  const fetchStocks = () => {
     console.log("fetching stocks")
-    fetch('https://jsonmock.hackerrank.com/api/stocks?date=5-January-2000')
-    .then(reponse => response.json())
-    .then(json => setStocks(json))
+    fetch(`https://jsonmock.hackerrank.com/api/stocks?date=${date}`)
+    .then(response => response.json())
+    .then(json => setStocks(json["data"]))
     .catch(error => console.error(error))
-    setStocks(stocks.push("123"))
+    console.log(stocks.data)
   }
+
+  // Component to render each item
+const StockItem = (stock) => (
+  
+  <div>
+    {
+    console.log(stock)
+  }
+    <p>Date: {stocks[0].date}</p>
+    <p>Open: {stocks[0].open}</p>
+    <p>High: {stocks[0].high}</p>
+    <p>Low: {stocks[0].low}</p>
+  </div>
+);
+
+
   return (
     <div className="layout-column align-items-center mt-50">
       <section className="layout-row align-items-center justify-content-center">
         <input type="text" className="large" value={date} id="app-input" data-testid="app-input" onChange={e=>updateDate(e.target.value)}/>
-        <button className="" id="submit-button" data-testid="submit-button" onSubmit={e=>fetchStocks(e.target.value)}>Search</button>
+        <button className="" id="submit-button" data-testid="submit-button" onClick={e=>fetchStocks()}>Search</button>
       </section>
-      <ul className="mt-50 slide-up-fade-in styled" id="stockData" data-testid="stock-data">
-        <li className="py-10"></li> {
-          stocks.map(
-            stock => (
-              <li className="py-10">stock</li>
-            )
-          )
-        }
+      <ul className="mt-50 slide-up-fade-in styled" id="stockData" data-testid="stock-data">  {
+        console.log(stocks)
+      }
+      {stocks.length > 0 ? (
+        <StockItem stock={stocks[0]} />
+    ) : (
+      <div className="mt-50 slide-up-fade-in" id="no-result" data-testid="no-result">No Result Found</div>
+    )}
       </ul>
-      <div className="mt-50 slide-up-fade-in" id="no-result" data-testid="no-result"></div>
+     
     </div>
   );
 }
